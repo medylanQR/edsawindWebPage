@@ -1,160 +1,180 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EDSAWIND | Especialistas en Energía Eólica</title>
+    <title>EDSAWIND | Advanced Wind Engineering</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="dark-theme">
 
     <header class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#" class="brand">
-                <img src="images/logoEdsaWind.png" alt="EDSAWIND Logo">
+        <div class="nav-container container">
+            <a href="index.html" class="brand">
+                <img src="images/logoEdsaWind.png" alt="EDSAWIND Logo" style="filter: brightness(0) invert(1);">
             </a>
             <nav class="nav-links">
-                <a href="#adn">Nuestros Servicios</a>
-                <a href="#tecnologia">Tecnología</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#contacto" class="btn-outline">Contactar</a>
+                <a href="#services-section" data-key="nav-services">Services</a>
+                <a href="#proyectos" data-key="nav-exp">Experience</a>
+                <a href="sodar.html" data-key="nav-wind">Wind Measurement</a>
+                
+                <div class="lang-selector">
+                    <span id="btn-en" onclick="changeLanguage('en')" class="lang-btn active">EN</span>
+                    <span class="lang-separator">|</span>
+                    <span id="btn-es" onclick="changeLanguage('es')" class="lang-btn">ES</span>
+                </div>
+
+                <a href="https://wa.me/50688162535" target="_blank" class="btn-primary-glow" data-key="nav-contact">Start Project</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="video-background">
-            <div class="video-overlay"></div>
-            <video autoplay loop muted playsinline>
+    <section class="hero-full-bg">
+        <div class="hero-video-wrapper">
+            <video autoplay loop muted playsinline class="full-video-element active">
                 <source src="images/EdsaWindVideoMain.mp4" type="video/mp4">
             </video>
+            <video autoplay loop muted playsinline class="full-video-element">
+                <source src="images/VideoMain3LandingPage.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
         </div>
         
-        <div class="container hero-content">
+        <div class="container hero-content-centered text-center">
             <div class="hero-text-box animate-up">
-                <span class="eyebrow">Ingeniería &middot; Diagnóstico &middot; Soluciones &middot; Activos</span>
-                <h1>Elevamos el rendimiento de su parque eólico.</h1>
-                <p>Estándares internacionales aplicados a la realidad de Latinoamérica. Optimizamos el ciclo de vida de sus activos eólicos con precisión inigualable.</p>
+                <span class="feature-badge"><i class="fas fa-certificate"></i> <span data-key="hero-badge">Engineering · Diagnostics · Solutions · Assets</span></span>
+                <h1 class="hero-title">EDSAWIND delivers <span class="text-glow" data-key="hero-title-accent">engineering, technical services</span>, <span data-key="hero-title-end">and specialized solutions for wind turbine operations in Latin America.</span></h1>
+                <p class="hero-desc" data-key="hero-desc">Through a combination of on-site experience and direct access to European partners, we provide the capability to execute complex projects and optimize wind farm performance with reliable and efficient solutions.</p>
                 
-                <div class="hero-buttons">
-                    <a href="#adn" class="btn-primary">Descubrir Soluciones</a>
+                <div class="hero-differentiators">
+                    <span><i class="fas fa-check-square"></i> <span data-key="diff-1">Strong Field Experience</span></span>
+                    <span><i class="fas fa-handshake"></i> <span data-key="diff-2">European Partnerships</span></span>
+                    <span><i class="fas fa-layer-group"></i> <span data-key="diff-3">Integrated Approach</span></span>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="#services-section" class="btn-primary-glow" data-key="hero-btn">Explore Solutions</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="adn" class="services-editorial">
+    <section id="services-section" class="industrial-accordion-section">
         <div class="container">
             <div class="section-header text-center animate-up">
-                <span class="eyebrow-dark">Nuestras Capacidades</span>
-                <h2>El ADN de nuestro servicio</h2>
-                <p>Soluciones integrales que cubren el ciclo de vida completo de sus activos eólicos, respaldadas por alianzas estratégicas europeas.</p>
+                <span class="eyebrow-dark"><i class="fas fa-industry"></i> <span data-key="serv-eyebrow">Business Lines</span></span>
+                <h2 data-key="serv-title">Advanced Technical Solutions</h2>
+                <p data-key="serv-desc">Engineering, execution, and specialized supply for the wind sector. Select an area for technical details.</p>
             </div>
 
-            <div class="editorial-list">
-                
-                <div class="editorial-row animate-up">
-                    <div class="row-bg" style="background-image: url('images/image2.png');"></div>
-                    <div class="row-content">
-                        <div class="row-num">01</div>
-                        <div class="row-title">
-                            <h3>Ingeniería Especializada</h3>
+            <div class="industrial-accordion-wrapper animate-up">
+                <div class="ind-accordion-item">
+                    <div class="ind-accordion-header">
+                        <div class="ind-header-left">
+                            <span class="ind-number">01</span>
+                            <div class="ind-icon"><i class="fas fa-cogs"></i></div>
+                            <h3 data-key="serv-1-title">MAJOR COMPONENT MAINTENANCE</h3>
                         </div>
-                        <div class="row-desc">
-                            <p>Mantenimiento preventivo, reparación de aspas, reemplazo de grandes componentes e izajes complejos. Diseño y fabricación de útiles especializados.</p>
+                        <div class="ind-header-right"><div class="ind-toggle"></div></div>
+                    </div>
+                    <div class="ind-accordion-body">
+                        <div class="ind-links-container">
+                            <a href="service-bearing.html" class="ind-link">
+                                <div><h4 data-key="s1-l1-t">Blade Bearing Replacement</h4><p data-key="s1-l1-d">Specialized replacement of blade bearings.</p></div>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="service-major.html" class="ind-link">
+                                <div><h4 data-key="s1-l2-t">Major Component Replacement</h4><p data-key="s1-l2-d">Replacement of main turbine components.</p></div>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="service-heavy.html" class="ind-link">
+                                <div><h4 data-key="s1-l3-t">Heavy Corrective Operations</h4><p data-key="s1-l3-d">High-complexity heavy maneuvers and correctives.</p></div>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
-                        <div class="row-icon"><i class="fas fa-tools"></i></div>
                     </div>
                 </div>
 
-                <div class="editorial-row animate-up" style="animation-delay: 0.1s;">
-                    <div class="row-bg" style="background-image: url('images/image3.png');"></div>
-                    <div class="row-content">
-                        <div class="row-num">02</div>
-                        <div class="row-title">
-                            <h3>Diagnósticos Avanzados</h3>
+                <div class="ind-accordion-item">
+                    <div class="ind-accordion-header">
+                        <div class="ind-header-left">
+                            <span class="ind-number">02</span>
+                            <div class="ind-icon"><i class="fas fa-wind"></i></div>
+                            <h3 data-key="serv-2-title">BLADE MAINTENANCE</h3>
                         </div>
-                        <div class="row-desc">
-                            <p>Tecnología predictiva mediante termografía, análisis de vibraciones y evaluación estructural profunda para evitar tiempos de inactividad.</p>
+                        <div class="ind-header-right"><div class="ind-toggle"></div></div>
+                    </div>
+                    <div class="ind-accordion-body">
+                        <div class="ind-links-container">
+                            <a href="service-blade-repair.html" class="ind-link">
+                                <div><h4 data-key="s2-l1-t">Blade Repair Services</h4><p data-key="s2-l1-d">Advanced field repair of aerodynamic parts.</p></div>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="service-integrated.html" class="ind-link">
+                                <div><h4 data-key="s2-l2-t">Integrated Service Scope</h4><p data-key="s2-l2-d">Comprehensive service scope for blade maintenance.</p></div>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
-                        <div class="row-icon"><i class="fas fa-microscope"></i></div>
                     </div>
                 </div>
 
-                <div class="editorial-row animate-up" style="animation-delay: 0.2s;">
-                    <div class="row-bg" style="background-image: url('images/imagelandingMain.png');"></div>
-                    <div class="row-content">
-                        <div class="row-num">03</div>
-                        <div class="row-title">
-                            <h3>Soluciones Tecnológicas</h3>
+                <div class="ind-accordion-item">
+                    <div class="ind-accordion-header">
+                        <div class="ind-header-left">
+                            <span class="ind-number">03</span>
+                            <div class="ind-icon"><i class="fas fa-ruler-combined"></i></div>
+                            <h3 data-key="serv-3-title">CUSTOM LIFTING & ENGINEERING TOOLS</h3>
                         </div>
-                        <div class="row-desc">
-                            <p>Medición de viento de alta precisión con sistemas SODAR AQSystem, estudios de factibilidad y estrategias de repotenciación de parques.</p>
+                        <div class="ind-header-right"><div class="ind-toggle"></div></div>
+                    </div>
+                    <div class="ind-accordion-body">
+                        <div class="ind-links-container">
+                            <a href="service-gruas.html" class="ind-link">
+                                <div><h4 data-key="s3-l1-t">Solution Design & Cranes</h4><p data-key="s3-l1-d">Provision of cranes and custom lifting strategies.</p></div>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <div class="ind-static-box">
+                                <span data-key="s3-static">Design and manufacturing of special tools:</span>
+                                <div class="ind-tags">
+                                    <span class="tag">Banana</span><span class="tag">Beam</span><span class="tag">Elephant feed</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="row-icon"><i class="fas fa-wind"></i></div>
                     </div>
                 </div>
 
-                <div class="editorial-row animate-up" style="animation-delay: 0.3s;">
-                    <div class="row-bg" style="background-image: url('images/image4.png');"></div>
-                    <div class="row-content">
-                        <div class="row-num">04</div>
-                        <div class="row-title">
-                            <h3>Gestión de Activos</h3>
+                <a href="sodar.html" class="ind-sodar-item">
+                    <div class="sodar-glow"></div>
+                    <div class="ind-header-left">
+                        <span class="ind-number" style="color: rgba(255,255,255,0.2);">04</span>
+                        <div class="ind-icon" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--color-accent);"><i class="fas fa-tower-cell"></i></div>
+                        <div class="sodar-text">
+                            <h3 data-key="s4-title">WIND MEASUREMENT (SODAR AQSYSTEM)</h3>
+                            <p data-key="s4-desc">Official distributors in Latin America. Data analysis and feasibility studies.</p>
                         </div>
-                        <div class="row-desc">
-                            <p>Administración técnica integral y desarrollo de sistemas de evacuación (TESUCON) para maximizar el retorno de inversión a largo plazo.</p>
-                        </div>
-                        <div class="row-icon"><i class="fas fa-chart-line"></i></div>
                     </div>
-                </div>
-
+                    <div class="sodar-action">
+                        <span class="ind-btn"><span data-key="s4-btn">Explore Technology</span> <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="tecnologia" class="tech-section">
-        <div class="container tech-container">
-            <div class="tech-text animate-up">
-                <span class="eyebrow-dark">Tecnología de Punta</span>
-                <h2>El SODAR AQ510</h2>
-                <p class="tech-lead">Medición remota de perfiles de viento hasta 300m.</p>
-                <p>El mantenimiento eólico moderno no permite suposiciones. Implementamos sistemas autónomos que operan de manera remota y continua incluso en las condiciones climáticas más extremas.</p>
-                
-                <ul class="check-list">
-                    <li><i class="fas fa-check-circle"></i> 100% autónomo y con acceso en tiempo real.</li>
-                    <li><i class="fas fa-check-circle"></i> Validado por normativas internacionales (DNV).</li>
-                    <li><i class="fas fa-check-circle"></i> Instalación rápida sin infraestructura pesada.</li>
-                </ul>
-            </div>
-            
-            <div class="tech-visual animate-up">
-                <div class="phone-mockup">
-                    <video autoplay loop muted playsinline>
-                        <source src="images/EdsaWindLandingPage.mp4" type="video/mp4">
-                    </video>
-                    <div class="live-tag"><span class="pulse"></span> Trabajo en Campo</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="proyectos" class="projects-section">
+    <section id="proyectos" class="projects-section-premium">
         <div class="container">
             <div class="section-header animate-up">
-                <span class="eyebrow-light">Portafolio Visual</span>
-                <h2>Ingeniería en Acción</h2>
-                <p>Nuestra experiencia real en campo, respaldada por un equipo con más de 20 años en el sector renovable.</p>
+                <span class="eyebrow-light" data-key="pro-eyebrow">Our Footprint</span>
+                <h2 data-key="pro-title">High Mountain Engineering</h2>
             </div>
-            
-            <div class="project-grid">
-                <div class="project-img animate-up" style="background-image: url('images/image2.png');">
-                    <div class="img-caption">Mantenimiento de Grandes Componentes</div>
+            <div class="project-grid-premium">
+                <div class="project-img-premium animate-up" style="background-image: url('images/image2.png');">
+                    <div class="img-caption-premium" data-key="pro-c1">Major Component Maintenance</div>
                 </div>
-                <div class="project-img animate-up" style="animation-delay: 0.2s; background-image: url('images/imagelandingMain.png');">
-                    <div class="img-caption">Instalación Sistema SODAR AQ510</div>
+                <div class="project-img-premium animate-up" style="animation-delay: 0.2s; background-image: url('images/imagelandingMain.png');">
+                    <div class="img-caption-premium" data-key="pro-c2">SODAR AQ510 System Installation</div>
                 </div>
             </div>
         </div>
@@ -164,52 +184,182 @@
         <div class="footer-bg-pattern"></div>
         <div class="container footer-wrapper">
             <div class="footer-content text-center animate-up">
-                <div class="footer-icon">
-                    <i class="fas fa-paper-plane"></i>
-                </div>
-                <h2>¿Listo para optimizar su parque eólico?</h2>
-                <p>Deje la infraestructura en manos de expertos. Contáctenos para diseñar una solución técnica a la medida de los requerimientos de su proyecto.</p>
-                
+                <div class="footer-icon"><i class="fas fa-paper-plane"></i></div>
+                <h2 data-key="foot-title">Ready to optimize your wind farm?</h2>
+                <p data-key="foot-desc">Contact us to design a technical solution tailored to your project.</p>
                 <div class="footer-actions">
-                    <a href="#" class="btn-solid-white">Solicitar Cotización Técnica</a>
-                    <a href="#" class="btn-outline-light"><i class="fab fa-linkedin"></i> Seguir en LinkedIn</a>
+                    <a href="https://wa.me/50688162535" target="_blank" class="btn-solid-white" data-key="foot-btn">Request Technical Quote</a>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <div class="footer-logo">
-                    <img src="images/logoEdsaWind.png" alt="EDSAWIND Logo">
-                </div>
-                <div class="footer-legal">
-                    <p>&copy; 2024 EDSAWIND. Todos los derechos reservados. Operando en Latinoamérica.</p>
-                </div>
+                <div class="footer-logo"><img src="images/logoEdsaWind.png" alt="EDSAWIND Logo" style="height: 35px; filter: brightness(0) invert(1);"></div>
+                <div class="footer-legal"><p>&copy; 2026 EDSAWIND. <span data-key="foot-rights">Operating in Latin America.</span></p></div>
             </div>
         </div>
     </footer>
 
+    <a href="https://wa.me/50688162535" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script>
-        // Animaciones CSS seguras al hacer scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
+        // --- MOTOR DE TRADUCCIÓN ---
+        const translations = {
+            en: {
+                "nav-services": "Services",
+                "nav-exp": "Experience",
+                "nav-wind": "Wind Measurement",
+                "nav-contact": "Start Project",
+                "hero-badge": "Engineering · Diagnostics · Solutions · Assets",
+                "hero-title-accent": "engineering, technical services",
+                "hero-title-end": "and specialized solutions for wind turbine operations in Latin America.",
+                "hero-desc": "Through a combination of on-site experience and direct access to European partners, we provide the capability to execute complex projects and optimize wind farm performance with reliable and efficient solutions.",
+                "diff-1": "Strong Field Experience",
+                "diff-2": "European Partnerships",
+                "diff-3": "Integrated Approach",
+                "hero-btn": "Explore Solutions",
+                "serv-eyebrow": "Business Lines",
+                "serv-title": "Advanced Technical Solutions",
+                "serv-desc": "Engineering, execution, and specialized supply for the wind sector. Select an area for technical details.",
+                "serv-1-title": "MAJOR COMPONENT MAINTENANCE",
+                "s1-l1-t": "Blade Bearing Replacement",
+                "s1-l1-d": "Specialized replacement of blade bearings.",
+                "s1-l2-t": "Major Component Replacement",
+                "s1-l2-d": "Replacement of main turbine components.",
+                "s1-l3-t": "Heavy Corrective Operations",
+                "s1-l3-d": "High-complexity heavy maneuvers and correctives.",
+                "serv-2-title": "BLADE MAINTENANCE",
+                "s2-l1-t": "Blade Repair Services",
+                "s2-l1-d": "Advanced field repair of aerodynamic parts.",
+                "s2-l2-t": "Integrated Service Scope",
+                "s2-l2-d": "Comprehensive service scope for blade maintenance.",
+                "serv-3-title": "CUSTOM LIFTING & ENGINEERING TOOLS",
+                "s3-l1-t": "Solution Design & Cranes",
+                "s3-l1-d": "Provision of cranes and custom lifting strategies.",
+                "s3-static": "Design and manufacturing of special tools:",
+                "s4-title": "WIND MEASUREMENT (SODAR AQSYSTEM)",
+                "s4-desc": "Official distributors in Latin America. Data analysis and feasibility studies.",
+                "s4-btn": "Explore Technology",
+                "pro-eyebrow": "Our Footprint",
+                "pro-title": "High Mountain Engineering",
+                "pro-c1": "Major Component Maintenance",
+                "pro-c2": "SODAR AQ510 System Installation",
+                "foot-title": "Ready to optimize your wind farm?",
+                "foot-desc": "Contact us to design a technical solution tailored to your project.",
+                "foot-btn": "Request Technical Quote",
+                "foot-rights": "Operating in Latin America."
+            },
+            es: {
+                "nav-services": "Servicios",
+                "nav-exp": "Experiencia",
+                "nav-wind": "Medición de Viento",
+                "nav-contact": "Iniciar Proyecto",
+                "hero-badge": "Engineering · Diagnostics · Solutions · Assets",
+                "hero-title-accent": "ingeniería, servicios técnicos",
+                "hero-title-end": "y soluciones especializadas para operaciones de turbinas en Latinoamérica.",
+                "hero-desc": "A través de la combinación de experiencia en campo y acceso directo a socios europeos, brindamos la capacidad de ejecutar proyectos complejos y optimizar el rendimiento de parques eólicos con soluciones confiables.",
+                "diff-1": "Sólida Experiencia en Campo",
+                "diff-2": "Alianzas Europeas",
+                "diff-3": "Enfoque Integrado",
+                "hero-btn": "Explorar Soluciones",
+                "serv-eyebrow": "Líneas de Negocio",
+                "serv-title": "Soluciones Técnicas de Vanguardia",
+                "serv-desc": "Ingeniería, ejecución y suministro especializado para el sector eólico. Seleccione un área para ver los detalles.",
+                "serv-1-title": "MANTENIMIENTO DE COMPONENTES MAYORES",
+                "s1-l1-t": "Cambio de Rodamientos de Pala",
+                "s1-l1-d": "Sustitución especializada de rodamientos.",
+                "s1-l2-t": "Reemplazo de Componentes Mayores",
+                "s1-l2-d": "Sustitución de componentes principales de la turbina.",
+                "s1-l3-t": "Operaciones Correctivas Pesadas",
+                "s1-l3-d": "Maniobras pesadas y correctivos de alta complejidad.",
+                "serv-2-title": "MANTENIMIENTO DE ASPAS",
+                "s2-l1-t": "Servicios de Reparación de Aspas",
+                "s2-l1-d": "Reparación avanzada de aeropartes en campo.",
+                "s2-l2-t": "Alcance de Servicio Integrado",
+                "s2-l2-d": "Gestión integral para el mantenimiento de palas.",
+                "serv-3-title": "HERRAMIENTAS DE IZAJE E INGENIERÍA",
+                "s3-l1-t": "Diseño de Soluciones y Grúas",
+                "s3-l1-d": "Provisión de grúas y estrategias de izaje a medida.",
+                "s3-static": "Diseño y fabricación de herramientas especiales:",
+                "s4-title": "MEDICIÓN DE VIENTO (SODAR AQSYSTEM)",
+                "s4-desc": "Distribuidores oficiales en Latinoamérica. Análisis de datos y estudios de factibilidad.",
+                "s4-btn": "Explorar Tecnología",
+                "pro-eyebrow": "Nuestra Huella",
+                "pro-title": "Ingeniería en Alta Montaña",
+                "pro-c1": "Mantenimiento de Grandes Componentes",
+                "pro-c2": "Instalación de Sistema SODAR AQ510",
+                "foot-title": "¿Listo para optimizar su parque eólico?",
+                "foot-desc": "Contáctenos para diseñar una solución técnica a la medida de su proyecto.",
+                "foot-btn": "Solicitar Cotización Técnica",
+                "foot-rights": "Operando en Latinoamérica."
+            }
+        };
+
+        function changeLanguage(lang) {
+            // Guardar preferencia
+            localStorage.setItem('preferredLang', lang);
+            
+            // Actualizar textos
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
                 }
             });
-        }, { threshold: 0.1 });
 
-        document.querySelectorAll('.animate-up').forEach(el => {
-            observer.observe(el);
+            // Actualizar botones del selector
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+            
+            // Cambiar el lang del HTML para SEO
+            document.documentElement.lang = lang;
+        }
+
+        // Cargar idioma guardado o Inglés por defecto
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLang') || 'en';
+            changeLanguage(savedLang);
         });
 
-        // Cambio de color del navbar
-        const navbar = document.getElementById('navbar');
+        // --- LÓGICA DE VIDEOS ---
+        const heroVideos = document.querySelectorAll('.full-video-element');
+        let currentVideoIndex = 0;
+        const videoDurations = [6000, 7000];
+        function playNextVideo() {
+            heroVideos[currentVideoIndex].classList.remove('active');
+            currentVideoIndex = (currentVideoIndex + 1) % heroVideos.length;
+            heroVideos[currentVideoIndex].classList.add('active');
+            setTimeout(playNextVideo, videoDurations[currentVideoIndex]);
+        }
+        if (heroVideos.length > 1) { setTimeout(playNextVideo, videoDurations[0]); }
+
+        // --- ACORDEÓN ---
+        const indHeaders = document.querySelectorAll('.ind-accordion-header');
+        indHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.ind-accordion-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.ind-accordion-body').style.maxHeight = null;
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                    const body = item.querySelector('.ind-accordion-body');
+                    body.style.maxHeight = body.scrollHeight + "px";
+                }
+            });
+        });
+
+        // --- OBSERVER ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
+
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
         });
     </script>
 </body>

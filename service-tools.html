@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Lifting Tools | EDSAWIND</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .service-hero { padding: 180px 0 100px; background: var(--color-bg-dark); text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .service-hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: #fff; margin-bottom: 20px; letter-spacing: -1px; }
+        .service-hero p { font-size: 1.2rem; color: var(--color-text-muted); max-width: 800px; margin: 0 auto; }
+        
+        .service-details { padding: 100px 0; background: #ffffff; color: var(--color-text-dark); }
+        .details-text h2 { font-size: 2.2rem; font-weight: 800; color: var(--color-primary); margin-bottom: 20px; }
+        .details-text p { font-size: 1.1rem; color: #475569; margin-bottom: 20px; line-height: 1.7; }
+        
+        /* BENTO BOX PARA HERRAMIENTAS */
+        .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
+        .tool-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 16px; padding: 40px 30px; text-align: center; transition: 0.3s; }
+        .tool-card:hover { transform: translateY(-5px); border-color: var(--color-secondary); box-shadow: 0 10px 25px rgba(0,163,218,0.1); }
+        .tool-icon { font-size: 3rem; color: var(--color-secondary); margin-bottom: 20px; }
+        .tool-card h3 { font-size: 1.5rem; color: var(--color-primary); font-weight: 800; margin-bottom: 15px; }
+
+        /* PREFORMAS */
+        .media-placeholder { 
+            background: #F1F5F9; border: 2px dashed #CBD5E1; border-radius: 12px; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            color: #94A3B8; text-align: center; position: relative; overflow: hidden;
+        }
+        .media-real { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2; border-radius: 10px; }
+        .tool-media { height: 250px; margin-top: 20px; }
+
+        @media (max-width: 900px) { .tools-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body class="dark-theme">
+
+    <header class="navbar scrolled" id="navbar">
+        <div class="nav-container container">
+            <a href="index.html" class="brand"><img src="images/logoEdsaWind.png" alt="EDSAWIND" style="filter: brightness(0) invert(1);"></a>
+            <nav class="nav-links"><a href="index.html#services-section"><i class="fas fa-arrow-left"></i> Volver a Servicios</a></nav>
+        </div>
+    </header>
+
+    <section class="service-hero">
+        <div class="container animate-up">
+            <span class="eyebrow" style="color: var(--color-accent); display: block; margin-bottom: 15px; font-weight: 800; letter-spacing: 3px;">Engineering Tools</span>
+            <h1>Diseño y Fabricación<br>de Herramientas</h1>
+            <p>Ingeniería a la medida para la creación de útiles especiales de izaje y mantenimiento eólico.</p>
+        </div>
+    </section>
+
+    <section class="service-details">
+        <div class="container">
+            <div class="details-text text-center animate-up" style="max-width: 800px; margin: 0 auto;">
+                <h2>Soluciones de Izaje a la Medida</h2>
+                <p>Las operaciones en parques eólicos requieren herramientas precisas y certificadas que se adapten a las geometrías complejas de las turbinas. Proveemos soluciones de diseño y fabricación de útiles especializados para garantizar maniobras seguras y eficientes.</p>
+            </div>
+
+            <div class="tools-grid animate-up">
+                
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-anchor"></i></div>
+                    <h3>Banana</h3>
+                    <p>Útil de izaje curvo especializado para el manejo seguro de palas durante procesos de montaje o desmontaje.</p>
+                    <div class="media-placeholder tool-media">
+                        <i class="fas fa-camera"></i><span>Foto de Herramienta</span>
+                        </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-ruler-horizontal"></i></div>
+                    <h3>Beam</h3>
+                    <p>Vigas de carga diseñadas con ingeniería de precisión para la distribución de peso en componentes mayores.</p>
+                    <div class="media-placeholder tool-media">
+                        <i class="fas fa-camera"></i><span>Foto de Herramienta</span>
+                        </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Elephant feed</h3>
+                    <p>Herramienta especializada de acoplamiento para facilitar el posicionamiento de componentes críticos en el rotor.</p>
+                    <div class="media-placeholder tool-media">
+                        <i class="fas fa-camera"></i><span>Foto de Herramienta</span>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: var(--color-bg-dark); padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="container">
+            <h2 style="color: #fff; margin-bottom: 20px;">¿Necesita fabricar un útil a medida?</h2>
+            <a href="mailto:info@edsawind.com" class="btn-primary-glow">Contactar Ingeniería</a>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

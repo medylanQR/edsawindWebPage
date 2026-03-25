@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blade Bearing Replacement | EDSAWIND</title>
+    <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .service-hero { padding: 180px 0 100px; background: var(--color-bg-dark); text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .service-hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: #fff; margin-bottom: 20px; letter-spacing: -1px; }
+        .service-hero p { font-size: 1.2rem; color: var(--color-text-muted); max-width: 800px; margin: 0 auto; }
+        
+        .service-details { padding: 100px 0; background: #ffffff; color: var(--color-text-dark); }
+        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        
+        .details-text h2 { font-size: 2.2rem; font-weight: 800; color: var(--color-primary); margin-bottom: 20px; }
+        .details-text p { font-size: 1.1rem; color: #475569; margin-bottom: 20px; line-height: 1.7; }
+        .details-list { list-style: none; margin-top: 30px; }
+        .details-list li { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; font-weight: 600; color: var(--color-primary); font-size: 1.05rem; }
+        .details-list i { color: var(--color-secondary); font-size: 1.2rem; margin-top: 2px; }
+
+        /* CAJAS DE PREFORMAS MULTIMEDIA (PLACEHOLDERS) */
+        .media-placeholder { 
+            background: #F1F5F9; border: 2px dashed #CBD5E1; border-radius: 16px; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            color: #94A3B8; text-align: center; position: relative; overflow: hidden; transition: 0.3s;
+        }
+        .media-placeholder:hover { border-color: var(--color-secondary); color: var(--color-secondary); background: #F8FAFC; }
+        .media-placeholder i { font-size: 3rem; margin-bottom: 15px; }
+        
+        /* Cuando pongas la ruta real, la imagen tapará el cuadro punteado */
+        .media-real { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2; border-radius: 14px; }
+
+        .main-media { height: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        
+        .gallery-section { padding: 80px 0 120px; background: #F8FAFC; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+        .gallery-item { height: 300px; }
+        
+        @media (max-width: 900px) { .details-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body class="dark-theme">
+
+    <header class="navbar scrolled" id="navbar">
+        <div class="nav-container container">
+            <a href="index.html" class="brand"><img src="images/logoEdsaWind.png" alt="EDSAWIND" style="filter: brightness(0) invert(1);"></a>
+            <nav class="nav-links"><a href="index.html#services-section"><i class="fas fa-arrow-left"></i> Volver a Servicios</a></nav>
+        </div>
+    </header>
+
+    <section class="service-hero">
+        <div class="container animate-up">
+            <span class="eyebrow" style="color: var(--color-accent); display: block; margin-bottom: 15px; font-weight: 800; letter-spacing: 3px;">Major Component Maintenance</span>
+            <h1>Blade Bearing Replacement</h1>
+            <p>Ejecución precisa y segura para la sustitución de rodamientos de pala, minimizando el tiempo de inactividad de su turbina eólica.</p>
+        </div>
+    </section>
+
+    <section class="service-details">
+        <div class="container details-grid">
+            <div class="details-text animate-up">
+                <h2>Precisión en maniobras de alta complejidad</h2>
+                <p>El cambio de rodamientos de pala es una de las operaciones correctivas más delicadas en el mantenimiento eólico. En EDSAWIND combinamos nuestra experiencia en campo en Latinoamérica con protocolos técnicos europeos para garantizar una ejecución impecable.</p>
+                <p>Nos encargamos del proceso integral, desde la planificación del izaje hasta el torqueo final y calibración.</p>
+                
+                <ul class="details-list">
+                    <li><i class="fas fa-check-circle"></i> Planificación y maniobras de izaje seguras.</li>
+                    <li><i class="fas fa-check-circle"></i> Herramientas especializadas y certificadas.</li>
+                    <li><i class="fas fa-check-circle"></i> Personal técnico altamente capacitado para trabajos en altura.</li>
+                    <li><i class="fas fa-check-circle"></i> Reducción de tiempos de parada (Downtime).</li>
+                </ul>
+            </div>
+
+            <div class="animate-up" style="animation-delay: 0.2s;">
+                <div class="media-placeholder main-media">
+                    <i class="fas fa-video"></i>
+                    <h3>Video o Foto Principal</h3>
+                    <p>Ideal para un video corto o foto de la grúa/rotor.</p>
+                    
+                    <video autoplay loop muted playsinline class="media-real" style="display: none;"> <source src="images/tu_video_aqui.mp4" type="video/mp4">
+                    </video>
+                    
+                    <img src="images/image2.png" class="media-real" alt="Mantenimiento" style="display: block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="text-center animate-up">
+                <h2 style="font-size: 2.5rem; color: var(--color-primary); font-weight: 800;">Evidencia en Campo</h2>
+            </div>
+            
+            <div class="gallery-grid animate-up">
+                <div class="media-placeholder gallery-item">
+                    <i class="fas fa-camera"></i><span>Foto Campo 1</span>
+                    <img src="images/image_5e2dc1.jpg" class="media-real" alt="Campo 1" style="display: block;"> </div>
+                
+                <div class="media-placeholder gallery-item">
+                    <i class="fas fa-camera"></i><span>Foto Campo 2</span>
+                    </div>
+                
+                <div class="media-placeholder gallery-item">
+                    <i class="fas fa-camera"></i><span>Foto Campo 3</span>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: var(--color-bg-dark); padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="container">
+            <h2 style="color: #fff; margin-bottom: 20px;">¿Requiere este servicio para su parque eólico?</h2>
+            <a href="mailto:info@edsawind.com" class="btn-primary-glow">Solicitar Cotización</a>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
