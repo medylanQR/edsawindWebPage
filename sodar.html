@@ -44,14 +44,18 @@
 
         .sodar-hero p { font-size: 1.3rem; color: var(--color-text-muted); margin-bottom: 40px; }
 
-        /* CASO DE ÉXITO CHIRIPA (TEXTOS ARREGLADOS) */
+        /* CASO DE ÉXITO CHIRIPA (IMAGEN AJUSTADA) */
         .chiripa-section { padding: 100px 0; background: #ffffff; }
         .chiripa-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
         }
+        
+        /* CAMBIO: Recuadro más pequeño y centrado */
         .chiripa-img-box {
             position: relative; border-radius: 20px; overflow: hidden;
             box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid rgba(0,0,0,0.05);
+            max-width: 480px; 
+            margin: 0 auto;
         }
         .chiripa-img-box img { width: 100%; display: block; }
         
@@ -60,11 +64,10 @@
         }
         .chiripa-text h2 span { background-color: rgba(0, 163, 218, 0.1); padding: 0 10px; color: var(--color-primary); }
         
-        /* CORRECCIÓN DE COLOR AQUÍ: Texto gris oscuro forzado para que se lea en fondo blanco */
         .chiripa-text p { font-size: 1.15rem; color: #475569; line-height: 1.8; margin-bottom: 20px; }
         .chiripa-text strong { color: var(--color-primary); }
 
-        /* SECCIÓN DEL VIDEO (NUEVA Y PROTAGONISTA) */
+        /* SECCIÓN DEL VIDEO */
         .video-installation-section {
             padding: 120px 0;
             background-color: var(--color-bg-dark);
@@ -131,7 +134,7 @@
         .vs-text p { font-size: 1rem; color: #cbd5e1; margin: 0; line-height: 1.5; }
         .vs-text strong { color: #fff; }
 
-        /* BENTO BOX BENEFITS (TEXTOS ARREGLADOS) */
+        /* BENTO BOX BENEFITS */
         .benefits-section { padding: 100px 0; background: #f8fafc; }
         .bento-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
         .stat-card {
@@ -141,8 +144,6 @@
         }
         .stat-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 45, 98, 0.1); }
         .stat-number { font-size: 3.5rem; font-weight: 900; color: var(--color-primary); line-height: 1; margin-bottom: 10px; }
-        
-        /* CORRECCIÓN DE COLOR AQUÍ: Texto gris oscuro forzado */
         .stat-label { font-size: 1.1rem; color: #475569; font-weight: 700; }
 
         @media (max-width: 900px) {
@@ -182,11 +183,11 @@
     <section class="chiripa-section">
         <div class="container chiripa-grid">
             <div class="chiripa-img-box animate-up">
-                <img src="images/SodarCR.png" alt="SODAR en Costa Rica" style="width: 100%; height: auto; object-fit: cover;">
+                <img src="images/sodarmainImage.png" alt="SODAR en Costa Rica">
             </div>
             <div class="chiripa-text animate-up" style="animation-delay: 0.2s;">
                 <h2>El AQ510 SODAR ya está en <span>operación</span> en el país.</h2>
-                <p>Dos unidades están funcionando como sistemas principales de medición en el <strong>Parque Eólico Chiripa</strong>, validando su precisión y confiabilidad en condiciones reales.</p>
+                <p>Dos unidades están funcionando como sistemas principales de medición en el <strong>Parque Eólico Chiripa y Planta Eólica Coopesantos</strong>, validando su precisión y confiabilidad en condiciones reales.</p>
                 <p>Como representantes oficiales de AQSystem en Costa Rica, desde EDSAWIND acompañamos a nuestros clientes en el desarrollo y optimización de sus parques eólicos con la tecnología más avanzada del mercado.</p>
                 
                 <div style="margin-top: 30px; display: flex; gap: 20px; align-items: center;">
@@ -200,12 +201,10 @@
 
     <section class="video-installation-section">
         <div class="container video-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
-            
             <div class="video-text animate-up">
                 <span class="eyebrow" style="color: var(--color-accent); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; display: block;">Trabajo en Campo</span>
                 <h2 style="color: #fff; font-size: 2.8rem; font-weight: 800; line-height: 1.1; margin-bottom: 25px;">Instalación rápida<br>sin grúas pesadas.</h2>
                 <p style="color: var(--color-text-muted); font-size: 1.15rem; margin-bottom: 30px; line-height: 1.7;">A diferencia de las torres meteorológicas que requieren obras civiles complejas, cimentaciones profundas y permisos extensos, el SODAR AQ510 se despliega y calibra a nivel de suelo.</p>
-                
                 <ul style="list-style: none; padding: 0;">
                     <li style="color: #fff; font-size: 1.1rem; margin-bottom: 15px; display: flex; align-items: center; gap: 15px; font-weight: 600;">
                         <i class="fas fa-check-circle" style="color: var(--color-accent); font-size: 1.3rem;"></i> Despliegue en tiempo récord.
@@ -218,7 +217,6 @@
                     </li>
                 </ul>
             </div>
-
             <div class="video-visual animate-up" style="animation-delay: 0.2s;">
                 <div class="video-frame-premium">
                     <video autoplay loop muted playsinline>
@@ -229,7 +227,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -239,69 +236,55 @@
                 <span class="eyebrow" style="color: var(--color-accent); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; display: block;">Comparativa Técnica</span>
                 <h2>La evolución de la medición eólica</h2>
             </div>
-
             <div class="vs-grid">
-                
                 <div class="vs-card vs-sodar animate-up">
-                    <div class="vs-card-content">
-                        <h3 class="vs-title">SODAR AQ510</h3>
-                        
-                        <div class="vs-feature">
-                            <div class="vs-icon"><i class="fas fa-wave-square"></i></div>
-                            <div class="vs-text">
-                                <h4>Tipo de Medición y Altura</h4>
-                                <p><strong>Sensor remoto acústico.</strong> Mide perfiles de viento hasta <strong>300m</strong> de altura. El dispositivo solo mide 1.8m a nivel del suelo.</p>
-                            </div>
+                    <h3 class="vs-title">SODAR AQ510</h3>
+                    <div class="vs-feature">
+                        <div class="vs-icon"><i class="fas fa-wave-square"></i></div>
+                        <div class="vs-text">
+                            <h4>Tipo de Medición y Altura</h4>
+                            <p><strong>Sensor remoto acústico.</strong> Mide perfiles de viento hasta <strong>300m</strong>. El dispositivo solo mide 1.8m a nivel del suelo.</p>
                         </div>
-
-                        <div class="vs-feature">
-                            <div class="vs-icon"><i class="fas fa-cloud-sun"></i></div>
-                            <div class="vs-text">
-                                <h4>Fidelidad de Datos (99% Uptime)</h4>
-                                <p>Operación continua. <strong>NO se ve afectado</strong> por condiciones climáticas extremas.</p>
-                            </div>
+                    </div>
+                    <div class="vs-feature">
+                        <div class="vs-icon"><i class="fas fa-cloud-sun"></i></div>
+                        <div class="vs-text">
+                            <h4>Fidelidad de Datos (99% Uptime)</h4>
+                            <p>Operación continua. <strong>NO se ve afectado</strong> por condiciones climáticas extremas.</p>
                         </div>
-
-                        <div class="vs-feature">
-                            <div class="vs-icon"><i class="fas fa-tools"></i></div>
-                            <div class="vs-text">
-                                <h4>Mantenimiento y Costos</h4>
-                                <p>Mantenimiento a nivel de suelo (<strong>Bajo Costo</strong>). Diagnóstico remoto con alertas automáticas. <strong>Sin riesgo humano</strong>.</p>
-                            </div>
+                    </div>
+                    <div class="vs-feature">
+                        <div class="vs-icon"><i class="fas fa-tools"></i></div>
+                        <div class="vs-text">
+                            <h4>Mantenimiento y Costos</h4>
+                            <p>Mantenimiento a nivel de suelo. Diagnóstico remoto automático. <strong>Sin riesgo humano</strong>.</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="vs-card vs-tower animate-up" style="animation-delay: 0.2s;">
-                    <div class="vs-card-content">
-                        <h3 class="vs-title">Torre Tradicional</h3>
-                        
-                        <div class="vs-feature">
-                            <div class="vs-icon"><i class="fas fa-broadcast-tower"></i></div>
-                            <div class="vs-text">
-                                <h4>Tipo de Medición y Altura</h4>
-                                <p>Anemómetro físico. Limitado a <strong>80-120m</strong> (muy difícil y costoso escalar a mayor altura).</p>
-                            </div>
+                    <h3 class="vs-title">Torre Tradicional</h3>
+                    <div class="vs-feature">
+                        <div class="vs-icon"><i class="fas fa-broadcast-tower"></i></div>
+                        <div class="vs-text">
+                            <h4>Tipo de Medición y Altura</h4>
+                            <p>Anemómetro físico. Limitado a <strong>80-120m</strong> (muy difícil escalar a mayor altura).</p>
                         </div>
-
-                        <div class="vs-feature">
-                            <div class="vs-icon"><i class="fas fa-bolt"></i></div>
-                            <div class="vs-text">
-                                <h4>Fidelidad de Datos</h4>
-                                <p>Se ve <strong>afectado por clima extremo</strong> (rayos, hielo, ráfagas). Requiere clima favorable para operar y reparar.</p>
-                            </div>
+                    </div>
+                    <div class="vs-feature">
+                        <div class="vs-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="vs-text">
+                            <h4>Fidelidad de Datos</h4>
+                            <p>Se ve <strong>afectado por clima extremo</strong>. Requiere clima favorable para reparar.</p>
                         </div>
-
-                        <div class="vs-feature">
-                            <div class="vs-icon"><i class="fas fa-exclamation-triangle"></i></div>
-                            <div class="vs-text">
-                                <h4>Mantenimiento y Riesgos</h4>
-                                <p>Mantenimiento alto y costoso (corrosión, instalación). <strong>Alto riesgo humano</strong> al requerir escalada y desplazamiento físico.</p>
-                            </div>
+                    </div>
+                    <div class="vs-feature">
+                        <div class="vs-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="vs-text">
+                            <h4>Mantenimiento y Riesgos</h4>
+                            <p>Mantenimiento alto y costoso. <strong>Alto riesgo humano</strong> al requerir escalada física.</p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -330,38 +313,50 @@
             <div style="text-align: center; margin-bottom: 40px;">
                 <i class="fas fa-calculator" style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 20px;"></i>
                 <h2 style="color: #fff; font-size: 2.5rem; font-weight: 800; margin-bottom: 15px;">Inicie su transición tecnológica</h2>
-                <p style="color: var(--color-text-muted); font-size: 1.1rem;">Complete el formulario para recibir asesoría sobre la compra, instalación o estudios de factibilidad con sistemas SODAR AQ510.</p>
+                <p style="color: var(--color-text-muted); font-size: 1.1rem;">Complete el formulario y le enviaremos la información técnica vía WhatsApp.</p>
             </div>
 
-            <form style="display: flex; flex-direction: column; gap: 20px;">
+            <form id="whatsappForm" style="display: flex; flex-direction: column; gap: 20px;">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <input type="text" placeholder="Nombre Completo" required style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; background: rgba(255,255,255,0.03); color: #fff; font-family: var(--font-main);">
-                    <input type="text" placeholder="Empresa" required style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; background: rgba(255,255,255,0.03); color: #fff; font-family: var(--font-main);">
+                    <input type="text" id="nombre" placeholder="Nombre Completo" required style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; background: rgba(255,255,255,0.03); color: #fff; font-family: var(--font-main);">
+                    <input type="text" id="empresa" placeholder="Empresa" required style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; background: rgba(255,255,255,0.03); color: #fff; font-family: var(--font-main);">
                 </div>
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <input type="email" placeholder="Correo Electrónico" required style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; background: rgba(255,255,255,0.03); color: #fff; font-family: var(--font-main);">
-                    <select required style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; background: rgba(255,255,255,0.03); color: #fff; font-family: var(--font-main);">
-                        <option value="" disabled selected style="color: #000;">Seleccione el servicio requerido</option>
-                        <option value="compra" style="color: #000;">Compra de Equipo SODAR AQ510</option>
-                        <option value="instalacion" style="color: #000;">Instalación y Puesta en Marcha</option>
-                        <option value="estudio" style="color: #000;">Estudio de Factibilidad / Análisis de Datos</option>
+                    <input type="email" id="email" placeholder="Correo Electrónico" required style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; background: rgba(255,255,255,0.03); color: #fff; font-family: var(--font-main);">
+                    <select id="servicio" required style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; background: rgba(255,255,255,0.03); color: #fff; font-family: var(--font-main);">
+                        <option value="" disabled selected style="color: #000;">Seleccione el servicio</option>
+                        <option value="Compra de Equipo AQ510" style="color: #000;">Compra de Equipo SODAR AQ510</option>
+                        <option value="Instalación y Puesta en Marcha" style="color: #000;">Instalación y Puesta en Marcha</option>
+                        <option value="Estudio de Factibilidad" style="color: #000;">Estudio de Factibilidad / Datos</option>
                     </select>
                 </div>
 
-                <textarea placeholder="Información adicional sobre su parque eólico o proyecto..." rows="4" style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; background: rgba(255,255,255,0.03); color: #fff; font-family: var(--font-main); resize: vertical;"></textarea>
+                <textarea id="mensaje" placeholder="Información adicional sobre su proyecto..." rows="4" style="padding: 18px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; background: rgba(255,255,255,0.03); color: #fff; font-family: var(--font-main); resize: vertical;"></textarea>
 
-                <button type="submit" class="btn-primary-glow" style="width: 100%; font-size: 1.1rem; padding: 20px; border: none; cursor: pointer; margin-top: 10px;">Enviar Solicitud de Proyecto</button>
+                <button type="submit" class="btn-primary-glow" style="width: 100%; font-size: 1.1rem; padding: 20px; border: none; cursor: pointer; margin-top: 10px;">Enviar Solicitud vía WhatsApp</button>
             </form>
         </div>
     </section>
 
     <footer style="background-color: #020617; border-top: 1px solid rgba(255,255,255,0.05); color: var(--color-text-muted); text-align: center; padding: 40px 0;">
-        <p>&copy; 2024 EDSAWIND. Todos los derechos reservados.</p>
+        <p>&copy; 2026 EDSAWIND. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // Animaciones al scroll
+        // Lógica de WhatsApp
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const empresa = document.getElementById('empresa').value;
+            const servicio = document.getElementById('servicio').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            const texto = `Hola EDSAWIND, mi nombre es *${nombre}* de la empresa *${empresa}*. Estoy interesado en: *${servicio}*. Detalles: ${mensaje}`;
+            const url = `https://wa.me/50688162535?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+        });
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -372,14 +367,10 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
 
-        // Efecto del Navbar
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
         });
     </script>
 </body>

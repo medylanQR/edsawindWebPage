@@ -10,8 +10,7 @@
     
     --color-primary: #002D62; 
     --color-secondary: #00A3DA; /* Cyan EDSA */
-    --color-accent: #00f0ff; /* Cyan Eléctrico */
-    
+    --color-accent: #00f0ff; 
     --font-main: 'Montserrat', sans-serif;
     --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --shadow-premium: 0 15px 40px rgba(0,0,0,0.5);
@@ -68,7 +67,6 @@ a { text-decoration: none; transition: var(--transition); }
 }
 .full-video-element.active { opacity: 1; z-index: 2; }
 
-/* Overlay ajustado para dar profundidad azulada */
 .video-overlay { 
     position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
     background: linear-gradient(180deg, rgba(2, 6, 23, 0.3) 0%, rgba(2, 6, 23, 0.8) 100%); 
@@ -78,7 +76,6 @@ a { text-decoration: none; transition: var(--transition); }
 .hero-content-centered { position: relative; z-index: 4; padding-top: 100px; }
 .hero-text-box { max-width: 1100px; margin: 0 auto; color: #FFFFFF; }
 
-/* Badge con toque de color */
 .feature-badge { 
     display: inline-flex; align-items: center; gap: 10px; 
     background: rgba(0, 163, 218, 0.15); 
@@ -88,14 +85,12 @@ a { text-decoration: none; transition: var(--transition); }
     margin-bottom: 30px; backdrop-filter: blur(10px); 
 }
 
-/* Título con "Highlight" de color en palabras clave */
 .hero-title { 
     font-size: clamp(1.8rem, 3.5vw, 3rem); 
     font-weight: 900; line-height: 1.1; margin-bottom: 30px; letter-spacing: -2px; color: rgba(255, 255, 255, 0.75); 
     text-shadow: none;
 }
 
-/* El texto que envuelvas en span (o la clase text-glow) tendrá color */
 .text-glow { 
     color: rgba(255, 255, 255, 0.75);
     text-shadow: none;
@@ -103,7 +98,6 @@ a { text-decoration: none; transition: var(--transition); }
 
 .hero-desc { font-size: clamp(1.1rem, 1.5vw, 1.3rem); color: #E2E8F0; margin-bottom: 45px; max-width: 850px; margin-left: auto; margin-right: auto; font-weight: 400; }
 
-/* Diferenciadores con iconos vibrantes */
 .hero-differentiators { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 55px; }
 .hero-differentiators span { 
     font-size: 0.9rem; font-weight: 700; color: #FFFFFF; 
@@ -124,14 +118,13 @@ a { text-decoration: none; transition: var(--transition); }
     filter: drop-shadow(0 0 5px var(--color-secondary));
 }
 
-/* --- SECCIÓN SERVICIOS (INDUSTRIAL PREMIUM) --- */
+/* --- SECCIÓN SERVICIOS --- */
 .industrial-accordion-section { padding: 120px 0; background-color: var(--color-bg-light); color: var(--color-text-dark); }
 .section-header { max-width: 800px; margin: 0 auto 60px; }
 .eyebrow-dark { display: inline-flex; align-items: center; gap: 10px; background: rgba(0, 45, 98, 0.05); padding: 8px 20px; border-radius: 30px; color: var(--color-primary); margin-bottom: 20px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; border: 1px solid rgba(0, 45, 98, 0.1); }
 .section-header h2 { font-size: clamp(2.5rem, 4vw, 3.5rem); color: var(--color-primary); letter-spacing: -1px; line-height: 1.1; margin-bottom: 25px; font-weight: 900; }
 .section-header p { font-size: 1.15rem; color: #475569; line-height: 1.7; }
 
-/* Resto del acordeón se mantiene con su diseño industrial limpio */
 .industrial-accordion-wrapper { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
 .ind-accordion-item { background: #FFFFFF; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 10px rgba(0,0,0,0.02); overflow: hidden; transition: var(--transition); position: relative; }
 .ind-accordion-item::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #E2E8F0; transition: var(--transition); }
@@ -208,58 +201,52 @@ a { text-decoration: none; transition: var(--transition); }
 .footer-logo img { height: 35px; filter: brightness(0) invert(1); }
 .footer-legal p { font-size: 0.9rem; color: var(--color-text-muted); }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 1024px) { .project-grid-premium { grid-template-columns: 1fr; } .hero-content-centered { padding-top: 150px; } }
-@media (max-width: 768px) {
-    .hero-title { font-size: 2.2rem; } .hero-desc { font-size: 1.1rem; }
-    .ind-accordion-header { flex-direction: column; align-items: flex-start; gap: 15px; padding: 25px; }
-    .ind-header-right { align-self: flex-end; margin-top: -30px; }
-    .ind-sodar-item { flex-direction: column; text-align: center; gap: 20px; padding: 25px; }
-    .ind-header-left { flex-direction: column; text-align: center; }
-    .ind-number { display: none; }
-    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
-    .nav-links { display: none; }
-}
-
 /* --- SELECTOR DE IDIOMA EN NAVBAR --- */
-.lang-selector {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 0 15px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--color-text-muted);
-}
+.lang-selector { display: flex; align-items: center; gap: 8px; margin: 0 15px; font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); }
+.lang-btn { cursor: pointer; transition: var(--transition); padding: 2px 4px; opacity: 0.5; position: relative; }
+.lang-btn:hover { color: var(--color-secondary); opacity: 1; }
+.lang-btn.active { color: var(--color-accent); opacity: 1; }
+.lang-btn.active::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 2px; background-color: var(--color-accent); }
+.lang-separator { opacity: 0.3; font-weight: 300; }
 
-.lang-btn {
-    cursor: pointer;
-    transition: var(--transition);
-    padding: 2px 4px;
-    opacity: 0.5;
-}
+/* --- WHATSAPP --- */
+.whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 2000; display: flex; align-items: center; justify-content: center; }
 
-.lang-btn:hover {
-    color: var(--color-secondary);
-    opacity: 1;
-}
-
-.lang-btn.active {
-    color: var(--color-accent);
-    opacity: 1;
-    border-bottom: 2px solid var(--color-accent);
-}
-
-.lang-separator {
-    opacity: 0.3;
-    font-weight: 300;
-}
-
-/* Ajuste responsive para el selector */
+/* --- MOBILE OPTIMIZATION (EL FIX) --- */
 @media (max-width: 768px) {
-    .lang-selector {
-        margin: 20px 0;
-        justify-content: center;
-        font-size: 1.2rem;
+    .container { width: 92%; }
+    
+    /* Navbar móvil */
+    .nav-links { display: none; }
+    .brand img { height: 35px; }
+
+    /* Hero móvil */
+    .hero-full-bg { padding: 120px 0 60px; height: auto; min-height: 100vh; }
+    .hero-title { font-size: 1.8rem !important; line-height: 1.3; margin-bottom: 20px; }
+    .hero-desc { font-size: 0.95rem; padding: 0 10px; margin-bottom: 30px; }
+    
+    /* Diferenciadores: uno debajo de otro */
+    .hero-differentiators { flex-direction: column; align-items: center; gap: 12px; margin-bottom: 40px; }
+    .hero-differentiators span { 
+        width: 90%; 
+        justify-content: center; 
+        font-size: 0.8rem; 
+        padding: 10px; 
     }
+
+    /* Proyectos: una sola columna */
+    .project-grid-premium { grid-template-columns: 1fr; gap: 20px; }
+    .project-img-premium { height: 300px; }
+    .img-caption-premium { font-size: 1.1rem; padding: 30px 20px; }
+
+    /* Secciones */
+    .industrial-accordion-section { padding: 60px 0; }
+    .section-header h2 { font-size: 2rem; }
+    .ind-accordion-header { padding: 20px; }
+    .ind-header-left { gap: 15px; }
+    .ind-number { display: none; }
+
+    /* Footer y WhatsApp */
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+    .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; font-size: 25px; }
 }
