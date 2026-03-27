@@ -91,13 +91,13 @@ a { text-decoration: none; transition: var(--transition); }
 /* Título con "Highlight" de color en palabras clave */
 .hero-title { 
     font-size: clamp(1.8rem, 3.5vw, 3rem); 
-    font-weight: 900; line-height: 1.1; margin-bottom: 30px; letter-spacing: -2px; color: var(--color-secondary); 
+    font-weight: 900; line-height: 1.1; margin-bottom: 30px; letter-spacing: -2px; color: rgba(255, 255, 255, 0.75); 
     text-shadow: none;
 }
 
 /* El texto que envuelvas en span (o la clase text-glow) tendrá color */
 .text-glow { 
-    color: var(--color-secondary);
+    color: rgba(255, 255, 255, 0.75);
     text-shadow: none;
 }
 
