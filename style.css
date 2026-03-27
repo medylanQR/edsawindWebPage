@@ -90,15 +90,15 @@ a { text-decoration: none; transition: var(--transition); }
 
 /* Título con "Highlight" de color en palabras clave */
 .hero-title { 
-    font-size: clamp(2.5rem, 5vw, 4.2rem); 
-    font-weight: 900; line-height: 1.1; margin-bottom: 30px; letter-spacing: -2px; color: #FFFFFF; 
-    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    font-size: clamp(1.8rem, 3.5vw, 3rem); 
+    font-weight: 900; line-height: 1.1; margin-bottom: 30px; letter-spacing: -2px; color: var(--color-secondary); 
+    text-shadow: none;
 }
 
 /* El texto que envuelvas en span (o la clase text-glow) tendrá color */
 .text-glow { 
-    color: var(--color-accent);
-    text-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+    color: var(--color-secondary);
+    text-shadow: none;
 }
 
 .hero-desc { font-size: clamp(1.1rem, 1.5vw, 1.3rem); color: #E2E8F0; margin-bottom: 45px; max-width: 850px; margin-left: auto; margin-right: auto; font-weight: 400; }
