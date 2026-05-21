@@ -38,10 +38,10 @@
         .main-media { height: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
         
         .gallery-section { padding: 80px 0 120px; background: #F8FAFC; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
-        .gallery-item { height: 300px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 50px; }
+        .gallery-item { height: 800px;}
         
-        @media (max-width: 900px) { .details-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 800px) { .details-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body class="dark-theme">
@@ -94,21 +94,18 @@
     <section class="gallery-section">
         <div class="container">
             <div class="text-center animate-up">
-                <h2 style="font-size: 2.5rem; color: var(--color-primary); font-weight: 800;">Evidencia en Campo</h2>
+                <h2 style="font-size: 1 rem; color: var(--color-primary); font-weight: 800;">Evidencia en Campo</h2>
             </div>
             
             <div class="gallery-grid animate-up">
-                <div class="media-placeholder gallery-item">
+                <div class="media-placeholder gallery-item overflow-hidden rounded-3xl h-[350px]">
                     <i class="fas fa-camera"></i><span>Foto Campo 1</span>
-                    <img src="images/image_5e2dc1.jpg" class="media-real" alt="Campo 1" style="display: block;"> </div>
-                
+                    <img src="images/image4.png" class="w-full h-full object-contain" alt="Campo 2" style="display: block;" > </div>
+
                 <div class="media-placeholder gallery-item">
                     <i class="fas fa-camera"></i><span>Foto Campo 2</span>
-                    </div>
+                    <img src="images/bearing1.jpg" class="w-full h-full object-contain"  alt="Campo 1" style="display: block;" > </div>
                 
-                <div class="media-placeholder gallery-item">
-                    <i class="fas fa-camera"></i><span>Foto Campo 3</span>
-                    </div>
             </div>
         </div>
     </section>
@@ -125,4 +122,4 @@
         document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
     </script>
 </body>
-</html>
+</html> 
