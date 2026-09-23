@@ -21,14 +21,28 @@
         .details-list { list-style: none; margin-top: 30px; }
         .details-list li { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; font-weight: 600; color: var(--color-primary); font-size: 1.05rem; }
         .details-list i { color: var(--color-secondary); font-size: 1.2rem; margin-top: 2px; }
-        .media-placeholder { background: #F1F5F9; border: 2px dashed #CBD5E1; border-radius: 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #94A3B8; text-align: center; position: relative; overflow: hidden; transition: 0.3s; }
-        .media-placeholder:hover { border-color: var(--color-secondary); color: var(--color-secondary); background: #F8FAFC; }
-        .media-placeholder i { font-size: 3rem; margin-bottom: 15px; }
-        .media-real { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2; border-radius: 14px; }
-        .main-media { height: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        
+        /* CLASE PREMIUM GLOW UNIFICADA */
+        .premium-glow {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen llene el espacio uniformemente */
+            border-radius: 20px;
+            border: 2px solid rgba(0, 163, 218, 0.6);
+            box-shadow: 0 25px 50px rgba(0, 163, 218, 0.25), 0 0 25px rgba(0, 163, 218, 0.15);
+            display: block;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        
+        .premium-glow:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 35px 60px rgba(0, 163, 218, 0.35), 0 0 35px rgba(0, 163, 218, 0.25);
+        }
+
         .gallery-section { padding: 80px 0 120px; background: #F8FAFC; }
         .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
-        .gallery-item { height: 300px; }
+        .gallery-item { height: 300px; } /* Mantenemos la altura que solicitaste */
+        
         @media (max-width: 900px) { .details-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -65,7 +79,7 @@
             </div>
 
             <div class="animate-up" style="animation-delay: 0.2s;">
-                    <!-- Video con efecto "alzado" y resplandor Cyan EDSA -->
+                    <!-- Video Original Intacto -->
                     <video autoplay loop muted playsinline style="
                         width: 100%; 
                         height: auto; 
@@ -87,17 +101,18 @@
                 <h2 style="font-size: 2.5rem; color: var(--color-primary); font-weight: 800;">Evidencia en Campo</h2>
             </div>
             <div class="gallery-grid animate-up">
-                <div class="media-placeholder gallery-item"><i class="fas fa-camera"></i><span>Foto Campo 1</span><img src="images/ImageGrua1.jpg" class="media-real gallery-item" ></div>
-                <div class="media-placeholder gallery-item"><i class="fas fa-camera"></i><span>Foto Campo 2</span><img src="images/ImageGrua2.jpg" class="media-real gallery-item" ></div>
-                <div class="media-placeholder gallery-item"><i class="fas fa-camera"></i><span>Foto Campo 3</span><img src="images/ImageGrua3.jpg" class="media-real gallery-item" ></div>
-                <div class="media-placeholder gallery-item"><i class="fas fa-camera"></i><span>Foto Campo 4</span><img src="images/ImageGrua4.jpeg" class="media-real gallery-item" ></div>
-                <div class="media-placeholder gallery-item"><i class="fas fa-camera"></i><span>Foto Campo 5</span><img src="images/ImageGrua5.jpg" class="media-real gallery-item" ></div>
-                <div class="media-placeholder gallery-item"><i class="fas fa-camera"></i><span>Foto Campo 6</span><img src="images/ImageGrua6.jpg" class="media-real gallery-item" ></div>
-                <div class="media-placeholder gallery-item"><i class="fas fa-camera"></i><span>Foto Campo 7</span><img src="images/ImageGrua7.jpg" class="media-real gallery-item" ></div>
-                <div class="media-placeholder gallery-item"><i class="fas fa-camera"></i><span>Foto Campo 8</span><img src="images/ImageGrua8.jpg" class="media-real gallery-item" ></div>
-                <div class="media-placeholder gallery-item"><i class="fas fa-camera"></i><span>Foto Campo 9</span><img src="images/ImageGrua9.jpg" class="media-real gallery-item" ></div>
-                <div class="media-placeholder gallery-item"><i class="fas fa-camera"></i><span>Foto Campo 10</span><img src="images/ImageGrua10.jpg" class="media-real gallery-item" ></div>
-                <div class="media-placeholder gallery-item"><i class="fas fa-camera"></i><span>Foto Campo 11</span><img src="images/ImageGrua11.jpg" class="media-real gallery-item" ></div>
+                <!-- FOTOS DIRECTAS CON CLASE PREMIUM GLOW -->
+                <div class="gallery-item"><img src="images/ImageGrua1.jpg" class="premium-glow" alt="Foto Campo 1"></div>
+                <div class="gallery-item"><img src="images/ImageGrua2.jpg" class="premium-glow" alt="Foto Campo 2"></div>
+                <div class="gallery-item"><img src="images/ImageGrua3.jpg" class="premium-glow" alt="Foto Campo 3"></div>
+                <div class="gallery-item"><img src="images/ImageGrua4.jpeg" class="premium-glow" alt="Foto Campo 4"></div>
+                <div class="gallery-item"><img src="images/ImageGrua5.jpg" class="premium-glow" alt="Foto Campo 5"></div>
+                <div class="gallery-item"><img src="images/ImageGrua6.jpg" class="premium-glow" alt="Foto Campo 6"></div>
+                <div class="gallery-item"><img src="images/ImageGrua7.jpg" class="premium-glow" alt="Foto Campo 7"></div>
+                <div class="gallery-item"><img src="images/ImageGrua8.jpg" class="premium-glow" alt="Foto Campo 8"></div>
+                <div class="gallery-item"><img src="images/ImageGrua9.jpg" class="premium-glow" alt="Foto Campo 9"></div>
+                <div class="gallery-item"><img src="images/ImageGrua10.jpg" class="premium-glow" alt="Foto Campo 10"></div>
+                <div class="gallery-item"><img src="images/ImageGrua11.jpg" class="premium-glow" alt="Foto Campo 11"></div>
             </div>
         </div>
     </section>
