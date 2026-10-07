@@ -12,12 +12,105 @@
     <meta property="og:url" content="https://www.edsawind.com">
     <meta property="og:type" content="website">
 
-<link rel="canonical" href="https://www.edsawind.com">
+    <link rel="canonical" href="https://www.edsawind.com">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- CSS PARA LOS BOTONES FLOTANTES -->
+    <style>
+        /* WhatsApp Oficial EDSAWIND (Derecha Extrema) */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* LinkedIn Oficial EDSAWIND (A la Derecha, junto a WA) */
+        .social-float-linkedin {
+            position: fixed;
+            bottom: 30px;
+            right: 110px; /* Alineado perfectamente al lado de WhatsApp */
+            width: 60px;
+            height: 60px;
+            background-color: #0a66c2;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+        }
+        .social-float-linkedin:hover {
+            transform: scale(1.1);
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(10, 102, 194, 0.4);
+        }
+
+        /* Botón de Casos de Éxito (A la Izquierda) */
+        .floating-success-badge {
+            position: fixed; 
+            bottom: 30px; 
+            left: 30px; /* Alineado a la izquierda */
+            z-index: 9999;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            color: #fff; 
+            padding: 15px 30px; 
+            border-radius: 50px;
+            font-weight: 800; 
+            font-size: 1rem;
+            display: flex; 
+            align-items: center; 
+            gap: 12px;
+            box-shadow: 0 10px 30px rgba(0, 163, 218, 0.4);
+            animation: pulse-glow-badge 2s infinite;
+            text-decoration: none; 
+            border: 2px solid rgba(0, 240, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .floating-success-badge:hover {
+            transform: translateY(-5px) scale(1.05);
+            color: #fff;
+        }
+        @keyframes pulse-glow-badge {
+            0% { box-shadow: 0 0 0 0 rgba(0, 163, 218, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(0, 163, 218, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 163, 218, 0); }
+        }
+
+        /* Ajustes para móviles */
+        @media (max-width: 768px) {
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 25px; }
+            .social-float-linkedin { bottom: 20px; right: 80px; width: 50px; height: 50px; font-size: 25px; }
+            .floating-success-badge { bottom: 20px; left: 20px; padding: 12px 20px; font-size: 0.9rem; }
+        }
+    </style>
 </head>
 <body class="dark-theme">
 
@@ -191,6 +284,119 @@
         </div>
     </section>
 
+    <!-- ============================================
+         SECCIÓN: CASO DE ÉXITO 
+         ============================================ -->
+    <section id="caso-exito" style="padding: 120px 0; background: linear-gradient(135deg, var(--color-bg-dark) 0%, #001a3d 100%); border-top: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden;">
+        <div style="content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px); background-size: 40px 40px; z-index: 1;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            
+            <div class="text-center animate-up" style="margin-bottom: 70px;">
+                <span style="background: rgba(255, 255, 255, 0.9); color: var(--color-primary); padding: 10px 25px; border-radius: 30px; font-weight: 900; letter-spacing: 3px; display: inline-block; margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">CASO DE ÉXITO EN COSTA RICA</span>
+                <h2 style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 900; color: #fff; line-height: 1.1;">Recuperación y puesta en servicio<br><span style="color: var(--color-accent); text-shadow: 0 0 20px rgba(0, 240, 255, 0.3);">Turbina Enercon E82</span></h2>
+                <p style="font-size: 1.25rem; color: #e2e8f0; max-width: 850px; margin: 25px auto 0;">Intervención integral combinando logística internacional, maniobras de izaje, soluciones técnicas y reparación de componentes mayores.</p>
+            </div>
+
+            <!-- VIDEO PRINCIPAL -->
+            <div class="animate-up" style="display: flex; justify-content: center; margin-bottom: 60px;">
+                <video autoplay loop muted playsinline style="
+                    width: 100%; 
+                    max-width: 1000px; 
+                    height: auto; 
+                    border-radius: 30px; 
+                    border: 4px solid #fff; 
+                    box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 40px rgba(0, 163, 218, 0.4); 
+                    display: block;
+                    transition: transform 0.5s ease;
+                " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <source src="images/CasoExitoVideo.mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+            </div>
+
+            <!-- TARJETAS DE TEXTO BLANCAS -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 120px;">
+                <div class="animate-up" style="background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); border-bottom: 5px solid var(--color-secondary); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="width: 60px; height: 60px; background: rgba(0, 163, 218, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="fas fa-truck-loading" style="color: var(--color-secondary); font-size: 1.8rem;"></i>
+                    </div>
+                    <h3 style="color: var(--color-primary); font-size: 1.4rem; margin-bottom: 15px; font-weight: 900;">Logística e Izaje Especializado</h3>
+                    <p style="color: #475569; line-height: 1.7;">Provisión e importación temporal de grúa sobre orugas <strong>Liebherr LR1600</strong> y herramientas especiales (Banana, Elephant Feet, soportes de aspas) para descenso y montaje del rotor.</p>
+                </div>
+                
+                <div class="animate-up" style="background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); border-bottom: 5px solid var(--color-accent); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="width: 60px; height: 60px; background: rgba(0, 240, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="fas fa-microchip" style="color: var(--color-accent); font-size: 1.8rem;"></i>
+                    </div>
+                    <h3 style="color: var(--color-primary); font-size: 1.4rem; margin-bottom: 15px; font-weight: 900;">Innovación EDSAWIND</h3>
+                    <p style="color: #475569; line-height: 1.7;">Fabricación y entrega de un <strong>sistema de control de pitch a la medida</strong> para permitir el giro de aspas con el rotor en piso, facilitando el mantenimiento.</p>
+                </div>
+                
+                <div class="animate-up" style="background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); border-bottom: 5px solid #64748b; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="width: 60px; height: 60px; background: rgba(100, 116, 139, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="fas fa-tools" style="color: #64748b; font-size: 1.8rem;"></i>
+                    </div>
+                    <h3 style="color: var(--color-primary); font-size: 1.4rem; margin-bottom: 15px; font-weight: 900;">Ejecución y Puesta en Marcha</h3>
+                    <p style="color: #475569; line-height: 1.7;">Cambio de rodamientos dañados, sellado/reparación del spoiler y aspas, seguido del montaje y puesta en servicio exitosa de la turbina.</p>
+                </div>
+            </div>
+
+            <!-- Galería de 5 Fotos -->
+            <div class="animate-up" style="margin-bottom: 120px;">
+                <h3 style="color: #fff; font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 40px;">Registro Visual de la Operación</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                    <div style="border-radius: 16px; overflow: hidden; border: 3px solid rgba(0, 163, 218, 0.4); aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.3); transition: border-color 0.3s ease, box-shadow 0.3s ease;" onclick="abrirImagen(this.querySelector('img').src)" onmouseover="this.style.borderColor='var(--color-secondary)'; this.style.boxShadow='0 15px 30px rgba(0, 163, 218, 0.5)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.borderColor='rgba(0, 163, 218, 0.4)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'; this.querySelector('img').style.transform='scale(1)';">
+                        <img src="images/CasoExito1.jpeg" alt="Maniobra 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    </div>
+                    <div style="border-radius: 16px; overflow: hidden; border: 3px solid rgba(0, 163, 218, 0.4); aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.3); transition: border-color 0.3s ease, box-shadow 0.3s ease;" onclick="abrirImagen(this.querySelector('img').src)" onmouseover="this.style.borderColor='var(--color-secondary)'; this.style.boxShadow='0 15px 30px rgba(0, 163, 218, 0.5)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.borderColor='rgba(0, 163, 218, 0.4)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'; this.querySelector('img').style.transform='scale(1)';">
+                        <img src="images/CasoExito2.jpeg" alt="Maniobra 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    </div>
+                    <div style="border-radius: 16px; overflow: hidden; border: 3px solid rgba(0, 163, 218, 0.4); aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.3); transition: border-color 0.3s ease, box-shadow 0.3s ease;" onclick="abrirImagen(this.querySelector('img').src)" onmouseover="this.style.borderColor='var(--color-secondary)'; this.style.boxShadow='0 15px 30px rgba(0, 163, 218, 0.5)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.borderColor='rgba(0, 163, 218, 0.4)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'; this.querySelector('img').style.transform='scale(1)';">
+                        <img src="images/CasoExito3.jpeg" alt="Maniobra 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    </div>
+                    <div style="border-radius: 16px; overflow: hidden; border: 3px solid rgba(0, 163, 218, 0.4); aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.3); transition: border-color 0.3s ease, box-shadow 0.3s ease;" onclick="abrirImagen(this.querySelector('img').src)" onmouseover="this.style.borderColor='var(--color-secondary)'; this.style.boxShadow='0 15px 30px rgba(0, 163, 218, 0.5)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.borderColor='rgba(0, 163, 218, 0.4)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'; this.querySelector('img').style.transform='scale(1)';">
+                        <img src="images/CasoExito4.jpeg" alt="Maniobra 4" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    </div>
+                    <div style="border-radius: 16px; overflow: hidden; border: 3px solid rgba(0, 163, 218, 0.4); aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.3); transition: border-color 0.3s ease, box-shadow 0.3s ease;" onclick="abrirImagen(this.querySelector('img').src)" onmouseover="this.style.borderColor='var(--color-secondary)'; this.style.boxShadow='0 15px 30px rgba(0, 163, 218, 0.5)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.borderColor='rgba(0, 163, 218, 0.4)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'; this.querySelector('img').style.transform='scale(1)';">
+                        <img src="images/CasoExito5.jpeg" alt="Maniobra 5" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integración de LinkedIn -->
+            <div class="animate-up" style="text-align: center; background: #fff; padding: 60px 40px; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.2); max-width: 900px; margin: 0 auto; border-top: 5px solid #0a66c2;">
+                <div style="background: #fff; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -100px auto 20px auto; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 2px solid #0a66c2;">
+                    <i class="fab fa-linkedin-in" style="font-size: 2.5rem; color: #0a66c2;"></i>
+                </div>
+                <h3 style="color: var(--color-primary); font-size: 2.2rem; font-weight: 900; margin-bottom: 10px;">Impacto en la Industria</h3>
+                <p style="color: #475569; font-size: 1.1rem; margin-bottom: 40px;">Vea la repercusión de este proyecto en nuestra red profesional.</p>
+                <div style="max-width: 700px; margin: 0 auto;">
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7513409783014748160" height="850" width="100%" frameborder="0" allowfullscreen="" title="Post integrado" style="border-radius: 15px; border: 1px solid rgba(0,0,0,0.05);"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VENTANA EMERGENTE PARA LAS IMÁGENES (LIGHTBOX) -->
+    <div id="visorImagen" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 10, 25, 0.95); z-index: 10000; align-items: center; justify-content: center; backdrop-filter: blur(10px);" onclick="cerrarImagen()">
+        <span style="position: absolute; top: 30px; right: 40px; color: #fff; font-size: 3.5rem; cursor: pointer; transition: color 0.3s; z-index: 10001;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='#fff'">&times;</span>
+        <img id="imagenAmpliada" src="" style="max-width: 95%; max-height: 95vh; border-radius: 10px; box-shadow: 0 0 50px rgba(0, 163, 218, 0.3); border: 2px solid rgba(255, 255, 255, 0.2);">
+    </div>
+
+    <script>
+        function abrirImagen(src) {
+            document.getElementById('imagenAmpliada').src = src;
+            document.getElementById('visorImagen').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; 
+        }
+        function cerrarImagen() {
+            document.getElementById('visorImagen').style.display = 'none';
+            document.body.style.overflow = 'auto'; 
+        }
+    </script>
+
     <footer id="contacto" class="footer-premium">
         <div class="footer-bg-pattern"></div>
         <div class="container footer-wrapper">
@@ -202,15 +408,54 @@
                     <a href="https://wa.me/50688162535" target="_blank" class="btn-solid-white" data-key="foot-btn">Request Technical Quote</a>
                 </div>
             </div>
-            <div class="footer-bottom">
+            
+            <!-- FOOTER BOTTOM CON QR INNOVATIONS BRANDING -->
+            <div class="footer-bottom" style="display: flex; flex-direction: column; align-items: center; gap: 20px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);">
                 <div class="footer-logo"><img src="images/logoEdsaWind.png" alt="EDSAWIND Logo" style="height: 35px; filter: brightness(0) invert(1);"></div>
-                <div class="footer-legal"><p>&copy; 2026 EDSAWIND developed by www.qrinnovationss.com                 <span data-key="foot-rights">  Operating in Latin America.</span></p></div>
+                <div class="footer-legal" style="text-align: center; color: #cbd5e1;">
+                    <p>&copy; 2026 EDSAWIND. <span data-key="foot-rights">Operating in Latin America.</span></p>
+                </div>
+                
+                <!-- BOTÓN "POWERED BY QR INNOVATIONS" CON TUS COLORES OFICIALES Y LOGO -->
+                <a href="https://www.qrinnovationss.com" target="_blank" style="
+                    display: inline-flex; 
+                    align-items: center; 
+                    gap: 12px; 
+                    background: #00122e; /* Fondo oscuro elegante */
+                    padding: 8px 25px; 
+                    border-radius: 50px; 
+                    border: 1px solid rgba(0, 163, 218, 0.4); /* Borde con tu azul/celeste */
+                    color: #fff; 
+                    text-decoration: none; 
+                    font-size: 0.9rem; 
+                    transition: all 0.3s ease; 
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+                " onmouseover="this.style.background='#001a40'; this.style.borderColor='rgba(0, 240, 255, 0.8)'; this.style.boxShadow='0 5px 20px rgba(0, 240, 255, 0.3)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.background='#00122e'; this.style.borderColor='rgba(0, 163, 218, 0.4)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.3)'; this.style.transform='translateY(0)';">
+                    <span style="color: #94a3b8; font-weight: 400;">Powered by</span>
+                    <strong style="color: #00a3da; font-weight: 800; letter-spacing: 0.5px;">QR Innovations</strong>
+                    <!-- AQUÍ INTEGRAMOS TU FAVICON -->
+                    <img src="images/FavIconQrinnovations.png" alt="QR Innovations Logo" style="height: 20px; width: auto; object-fit: contain;">
+                </a>
             </div>
         </div>
     </footer>
 
+    <!-- BOTONES FLOTANTES DE REDES -->
+    
+    <!-- WhatsApp (A la Derecha, Extremo) -->
     <a href="https://wa.me/50688162535" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- LinkedIn Oficial EDSAWIND (A la Derecha, a la par de WA) -->
+    <a href="https://www.linkedin.com/company/edsawind/?skipRedirect=true&originalSubdomain=cr" class="social-float-linkedin" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <!-- NUEVO BOTÓN FLOTANTE QUE DESLIZA HACIA EL CASO DE ÉXITO (Izquierda) -->
+    <a href="#caso-exito" class="floating-success-badge">
+        <i class="fas fa-arrow-down" style="color: var(--color-accent); font-size: 1.2rem;"></i> 
+        <span>Ver Caso de Éxito</span>
     </a>
 
     <script>
@@ -307,10 +552,8 @@
         };
 
         function changeLanguage(lang) {
-            // Guardar preferencia
             localStorage.setItem('preferredLang', lang);
             
-            // Actualizar textos
             document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
                 if (translations[lang][key]) {
@@ -318,15 +561,12 @@
                 }
             });
 
-            // Actualizar botones del selector
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
             document.getElementById('btn-es').classList.toggle('active', lang === 'es');
             
-            // Cambiar el lang del HTML para SEO
             document.documentElement.lang = lang;
         }
 
-        // Cargar idioma guardado o Inglés por defecto
         document.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('preferredLang') || 'en';
             changeLanguage(savedLang);
